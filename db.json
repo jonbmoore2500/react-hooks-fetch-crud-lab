@@ -87,61 +87,6 @@
       ],
       "correctIndex": 0,
       "id": 8
-    },
-    {
-      "prompt": "Jonathan",
-      "answers": [
-        "is",
-        "really",
-        "cool",
-        "yes"
-      ],
-      "correctIndex": 0,
-      "id": 9
-    },
-    {
-      "prompt": "a",
-      "answers": [
-        "b",
-        "c",
-        "d",
-        "e"
-      ],
-      "correctIndex": 0,
-      "id": 10
-    },
-    {
-      "prompt": "a",
-      "answers": [
-        "b",
-        "c",
-        "d",
-        "e"
-      ],
-      "correctIndex": 0,
-      "id": 11
-    },
-    {
-      "prompt": "squeak",
-      "answers": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ],
-      "correctIndex": 0,
-      "id": 12
-    },
-    {
-      "prompt": "squeak2",
-      "answers": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ],
-      "correctIndex": 0,
-      "id": 13
     }
   ]
 }
