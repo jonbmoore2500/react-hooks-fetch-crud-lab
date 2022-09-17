@@ -27,10 +27,34 @@ function App() {
     })
   }
 
+  function handleNewCorrect(newCorrect, id) {
+    console.log('in app', newCorrect, id)
+    fetch(`http://localhost:4000/questions/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      "correctIndex": newCorrect
+    })
+    })
+    .then(r => r.json())
+    .then((updatedQuestion) => {
+      const newQuestions = questions.map((question) => {
+        if (question.id === id) {
+          return {...question, correctIndex: newCorrect}
+        }
+        return question
+      })
+      console.log(newQuestions)
+      
+    })
+  }
+
   return (
     <main>
       <AdminNavBar onChangePage={setPage} />
-      {page === "Form" ? <QuestionForm onNewQuestion={onNewQuestion}/> : <QuestionList questions={questions} onDelete={onDelete}/>}
+      {page === "Form" ? <QuestionForm onNewQuestion={onNewQuestion}/> : <QuestionList questions={questions} onDelete={onDelete} onSetCorrect={handleNewCorrect}/>}
     </main>
   );
 }
